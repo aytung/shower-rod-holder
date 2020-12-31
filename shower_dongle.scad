@@ -1,3 +1,12 @@
+
+module extrusion_cut_hole() {
+translate([0, 22.5, 12.5 + 40])
+rotate([90,0,0])
+linear_extrude(height=7.5)
+circle(12.5);
+}
+
+
 difference() {
 union() {
 linear_extrude(height=60, center=false, convexity=0, twist=0)
@@ -43,13 +52,9 @@ circle(2.5);
 
 }
 
-
-
-translate([0, 22.5, 12.5 + 40])
-rotate([90,0,0])
-linear_extrude(height=7.5)
-circle(12.5);
+extrusion_cut_hole();
 }
+
 
 
 
